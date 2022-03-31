@@ -1,64 +1,175 @@
-
+*{
+  padding: 0;
+  margin: 0;
+  color: #ffff;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* Body, cuarpo */
 body{
-    background: #252839;
-    color: azure;
+  background: #142F43;
+}
+/* Header, encabezado */
+header{
+  background: #8A39E1;
+  text-align: center;
+  margin: 0 auto;
+  padding: 5px;
+  height: 40px;
 }
 header h1{
   display: inline;
   float: left;
-}
-nav ul{
-  display: inline;
-  float: right;
+  margin-left: 50px;
 }
 nav ul li{
-  list-style: none;
-  display: inline;
+  float: right;
+  padding: 5px;
+  margin-right: 20px;
+  list-style: none;      
 }
 nav ul li a{
   text-decoration: none;
+  margin-top: 10px;
   padding: 5px;
-  border: 2px solid #252839;
-  background: #ffff;
+  border: 2px #ffff solid;
   border-radius: 20px;
- 
 }
-nav ul li a:hover{
-  text-decoration: none;
-  padding: 10px;
-  color: #ffff;
-  border: 2px solid ;
-  background: #252839;
- 
+nav ul li a:hover{      
+  background: #7267CB;   
 }
+/* main, Englobador de contenido */
 main{
-  text-align: center;
+  width: 100%;
+ 
   margin: 0 auto;
-}
-header{
   text-align: center;
-  margin: 10px;
 }
-footer{
-  margin-top: 420px;
+table{
+  margin: 0 auto;
+  border: 2px black solid;
   
 }
-section{
-  margin-top: 100px;
+table tr td{
+  border: 2px black solid;
+ 
 }
+
+.contenedor{
+  margin: 0 auto;
+  
+  width: 360px;
+  color: #5560D7;
+}
+.contenedor input{
+  padding-left: 5px;
+  color: #6672CC;
+}
+.contenedor .nombre{
+  float: left;
+  background: #E8EBFE;
+}
+.contenedor .Apellido{
+  float: right;
+  background: #E8EBFE;
+}
+.contenedor .Email{
+  float: left;
+  margin-top: 10px;
+  background: #DCE0FD;
+}
+.contenedor .Telefono{
+  margin-top: 10px;
+  float: right;
+  background: #DCE0FD;
+}
+.contenedor input{
+  margin: 2px;
+  height: 30px;
+  border-radius: 5px;
+}
+.contenedor .Direccion{
+  margin-top: 10px;
+  width: 348px;
+  background: #C7CAFD;
+}
+.contenedor .Mensaje{
+  margin-top: 10px;
+  width: 348px;
+  height: 60px;
+  color: #5560D7;
+  background: #A4ABFB;
+}
+.contenedor .Enviar{
+  
+  background: #1A2DF3;
+  color: #fff;
+  width: 130px;
+  height: 30px;
+  border-radius: 20px;
+}
+/* aside, menu lateral */
+aside{
+  height: 80vh !important;
+  float: left;
+  width: 10%;
+  text-align: justify;
+}
+aside ul{
+  margin: 0 auto;
+  background: #8A39E1;
+  float: left;
+  text-align: justify;  
+}
+aside ul li{
+  padding: 10px;
+  list-style: none;
+}
+aside ul li a{
+  text-decoration: none;
+  color: #ffff;
+  width: 100%;   
+}
+aside ul li a:hover{
+  text-decoration: none;
+  padding: 0,20px;
+  color: #ffff;
+  background: #7A0BC0;
+}
+/* section, seccion, contenido especifico */
+section{
+  background: #7267CB;
+  width: 100%;
+  padding-top: 50px;
+  margin: 0 auto;
+  text-align: center;    
+}
+main section img.foto{
+  margin-top: 20px;
+  border-radius: 20%;
+  border:2px #142F43 solid;
+}
+/* footer, parte final */
+footer{
+  background: #8A39E1;
+  text-align: center;
+  padding: 5px;  
+} 
+.separador{
+  clear: both;
+}
+
 .link{
-    position: relative;
-    margin: 0 auto;
-    width: 800px;
-    right: 150px;
-    
+  padding-top: 40px;
+  position: relative;
+  margin: 0 auto;
+  width: 800px;
+  right: 150px;   
 }
 .tabla{
   margin-top: 40px;
     position: relative;
     width: 800px;
     left: 770px;
-   
 }
 .contenido{
     position: relative;
@@ -66,7 +177,6 @@ section{
     width: 800px;
     text-align: center;
     clear: left;
-  
 }
 .su{ 
     position: relative;
@@ -84,54 +194,3 @@ section{
     position: relative;
     left: 35%;
 }
-
-/* * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: 'Mochiy Pop One', sans-serif;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #252839;
-}
-ul {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-ul li {
-  position: relative;
-  list-style: none;
-}
-ul li a {
-  font-size: 4em;
-  text-decoration: none;
-  letter-spacing: 2px;
-  line-height: 1em;
-  text-transform: uppercase;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
-}
-ul li a::before {
-  content: attr(data-text);
-  position: absolute;
-  color: var(--clr);
-  width: 0;
-  overflow: hidden;
-  transition: 1s;
-  border-right: 8px solid var(--clr);
-  -webkit-text-stroke: 1px var(--clr);
-}
-ul li a:hover::before {
-  width: 100%;
-  filter: drop-shadow(0 0 25px var(--clr))
-} */
-
-
-
